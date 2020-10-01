@@ -1,0 +1,23 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ForgotPassword {
+	public WebDriver driver;
+	
+	By login = By.cssSelector("[id='user_email']");
+	By sendInstructions = By.cssSelector("input[type='submit']");
+
+	public ForgotPassword(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public WebElement getEmail() {
+		return driver.findElement(login);
+	}
+	public WebElement sendInstructions() {
+		return driver.findElement(sendInstructions);
+	}
+}
