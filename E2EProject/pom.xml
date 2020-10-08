@@ -9,7 +9,7 @@
 
   <name>E2EProject</name>
   <url>http://maven.apache.org</url>
-	<build><!-- resource filter must be placed in order for  -->
+	<build>
 		<resources>
       		<resource>
         		<directory>src/main/java/Resources</directory>
@@ -34,7 +34,6 @@
   </properties>
 
   <dependencies>
-  	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 	<dependency>
     	<groupId>com.aventstack</groupId>
     	<artifactId>extentreports</artifactId>
@@ -60,7 +59,7 @@
     	<groupId>org.seleniumhq.selenium</groupId>
     	<artifactId>selenium-java</artifactId>
     	<version>3.141.59</version>
-	</dependency><!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+	</dependency>
 	<dependency>
     	<groupId>commons-io</groupId>
     	<artifactId>commons-io</artifactId>

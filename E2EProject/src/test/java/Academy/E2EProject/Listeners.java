@@ -13,10 +13,12 @@ import com.aventstack.extentreports.Status;
 import Academy.E2EProject.Base;
 import Resources.ExtentReportNG;
 
+//listeners object class
 public class Listeners extends Base implements ITestListener{
+	//initialize an ExtentReports object
 	ExtentReports extent = ExtentReportNG.getReportObject();
 	ExtentTest test;
-	//All instances should be thread safe
+
 	//ExtentTest object belongs to Threadlocal which will give the correct thread for each object ran parallel
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 	public void onTestStart(ITestResult result) {
@@ -24,12 +26,12 @@ public class Listeners extends Base implements ITestListener{
 		//must set thread to be mapped correctly
 		extentTest.set(test);
 	}
-
+	//with a successful test. the report should be add to the log as "Passed test"
 	public void onTestSuccess(ITestResult result) {
 		test.log(Status.PASS, "Test Passed");
 		
 	}
-
+	//with a failure in test
 	public void onTestFailure(ITestResult result) {
 		// implement screenshot method
 		WebDriver driver = null;
@@ -38,16 +40,17 @@ public class Listeners extends Base implements ITestListener{
 		//following line will check thread pool to give validatetitle get method
 		extentTest.get().fail(result.getThrowable());
 		try {
+			//retrives driver instance of failed test
 			driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
-		} catch (Exception e) {
-			
+		} 
+		catch (Exception e) {			
 			e.printStackTrace();
 		} 	
 		try {
-			extentTest.get().addScreenCaptureFromPath(getScreenShot(testName,driver),result.getMethod().getMethodName());
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			//adds screenshot with the path and file details of methodname which failed
+			extentTest.get().addScreenCaptureFromPath(getScreenShot(testName,driver),result.getMethod().getMethodName());			
+		} 
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
