@@ -1,0 +1,2 @@
+# gDemo
+This Project will test the functionality of a web page using the Selenium Framework, and Maven plus TestNG build tools. Core concepts of Java will be utilized to ensure that the project is efficiently written. TestNG Annotations will be used to control sequence of executions. Through the projects Texts, User Names, Passwords will be tested. Outcomes are simulated based on certain criteria's.
