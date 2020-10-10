@@ -28,26 +28,25 @@ public class Listeners extends Base implements ITestListener{
 	}
 	//with a successful test. the report should be add to the log as "Passed test"
 	public void onTestSuccess(ITestResult result) {
-		test.log(Status.PASS, "Test Passed");
-		
+		test.log(Status.PASS, "Test Passed");	
 	}
 	//with a failure in test
 	public void onTestFailure(ITestResult result) {
-		// implement screenshot method
+		// implement method to take screen shot of test
 		WebDriver driver = null;
 		String testName = result.getMethod().getMethodName();
 		//below methods captures the instance of the driver object which will be send to the class in Base
-		//following line will check thread pool to give validatetitle get method
+		//following line will check thread pool to give validate title get method
 		extentTest.get().fail(result.getThrowable());
 		try {
-			//retrives driver instance of failed test
+			//retrieves driver instance of failed test
 			driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
 		} 
 		catch (Exception e) {			
 			e.printStackTrace();
 		} 	
 		try {
-			//adds screenshot with the path and file details of methodname which failed
+			//adds screenshot with the path and file details of method name which failed
 			extentTest.get().addScreenCaptureFromPath(getScreenShot(testName,driver),result.getMethod().getMethodName());			
 		} 
 		catch (IOException e) {

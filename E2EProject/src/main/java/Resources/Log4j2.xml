@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN">
+<Configuration debug="true">
 	<properties>
-		<property name="basePath">./logs</property>
+		<property name="basePath">./Logs</property>
 	</properties>
-  <Appenders><!-- using the roolingFile tag, should allow for the file to be downloaded within the CWD -->
+  <Appenders><!-- using the rollingFile tag, should allow for the file to be downloaded within the CWD -->
   	<RollingFile name="File" fileName="Logs/prints.log" filePattern="${basePath}">
-  		<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+  		<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5lvel %logger{36} - %msg%n"/>
   		<sizeBasedTriggeringPolicy size="500"/>
   	</RollingFile>
-    <Console name="Console" target="SYSTEM_OUT">
+  	<Console name="Console" target="SYSTEM_OUT">
       <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-    </Console>
+    </Console> -->
+    
   </Appenders>
   <Logger ><!-- Below will allow for specific packages to display specific types of logs -->
-    <Root level="trace">
-      <AppenderRef ref="File"/>
+    <Root level="All">
+      <AppenderRef ref="RollingFile"/>
+      <AppenderRef ref="Console"/>
     </Root>
   </Logger>
+
 </Configuration>

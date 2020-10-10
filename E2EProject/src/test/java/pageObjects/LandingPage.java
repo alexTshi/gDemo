@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 
 public class LandingPage {
 	public WebDriver driver;
-	//creates objects using By class and assignes respective html web elements 
-	By signin = By.cssSelector("a[href*='sign_in']");
-	By title = By.cssSelector(".text-center>h2");
-	By navBar = By.cssSelector(".navbar.navbar-default.navbar-static-top");
+	//creates objects using By class and assigns respective HTML web elements 
+	private By signin = By.cssSelector("a[href*='sign_in']");
+	private By title = By.cssSelector(".text-center>h2");
+	private By navBar = By.cssSelector(".navbar.navbar-default.navbar-static-top");
 	
 	//assigns current driver instance the parameter driver object
 	public LandingPage(WebDriver driver) {

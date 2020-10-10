@@ -27,10 +27,11 @@ public class Base {
 		String browserType = prop.getProperty("browser");
 		
 		if(browserType.equals("Chrome")) {
-			//Hardcoded System Property for Chromedriver Option
-			System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win33\\chromedriver.exe");
+			//Hardcoded System Property for Chromedriver OptionS
+			System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32\\chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("headless");
+			//Headless option will run tests without opening browsers
+			//options.addArguments("headless");
 			//Chrome options passed to chromedriver
 			driver = new ChromeDriver(options);
 		}
@@ -45,7 +46,7 @@ public class Base {
 		return driver;
 	}
 	public String getScreenShot(String methodName, WebDriver driver) throws IOException {
-		//initializing TakeScreenshot interface object and typecasting the image of the Webdrive instance
+		//initializing TakeScreenshot interface object and typecasting the image of the Webdriver instance
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		//creating a file source and calling method to take screenshot
 		File source = ts.getScreenshotAs(OutputType.FILE);

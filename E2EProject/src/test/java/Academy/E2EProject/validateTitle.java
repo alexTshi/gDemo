@@ -12,26 +12,26 @@ import pageObjects.LandingPage;
 import pageObjects.LoginPage;
 
 public class validateTitle extends Base{
-	//Adding local Webdriver so that there are no conflicts when ran on parallel
+	//Adding local Web driver so that there are no conflicts when ran on parallel
 	public WebDriver driver;
 	private static Logger Log = LogManager.getLogger(Base.class.getName());
 	
-	//test run before all tests in class
+	//test run before all tests in c	lass
 	@BeforeTest
 	public void initialize() throws IOException {
-		//method will initalize driver from base class and add "Debug" type level logs
+		//method will initialize driver from base class and add "Debug" type level logs
 		driver = initializeDriver();
-		Log.debug("Driver Initialized");
+		Log.info("Driver Initialized");
 		driver.get(prop.getProperty("url"));
-		Log.debug("Url Activated");
-	}
-	
+		Log.info("Url Activated");
+	}	
 	@Test
 	public void getTitle() throws IOException{
 		//method will call landing page to validate a title and add again to logger
 		LandingPage lPage = new LandingPage(driver);
+		//Test explicitly set to fail for check how errors will be handled
 		Assert.assertEquals(lPage.getTitle().getText(), "FEATURED COURrSES");	
-		Log.debug("Successfully Validated Title");
+		Log.info("Successfully Validated Title");
 	}
 	//closes browser and instance after all tests scripts are run
 	@AfterTest

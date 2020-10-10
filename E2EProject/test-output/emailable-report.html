@@ -9,49 +9,27 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">AppTesting</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">8</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">ValidateTitle</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">21,145</td><td></td><td></td></tr>
-<tr><td><a href="#t2">ValidateHomepage</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">25,942</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t3">ValidateNav</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">28,329</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">75,424</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">AppTesting</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">12</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Validate Title in page</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">8,239</td><td></td><td></td></tr>
+<tr><td><a href="#t2">ValidateTitle</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">10,017</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">Validate User Login</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">14,687</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">3</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">32,955</th><th colspan="2"></th></tr>
 </table>
 <table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">ValidateTitle &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Academy.E2EProject.validateTitle</td><td><a href="#m0">getTitle</a></td><td rowspan="1">1598414837288</td><td rowspan="1">40</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">ValidateHomepage &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Academy.E2EProject.HomePage</td><td><a href="#m1">validateLogin</a></td><td rowspan="1">1598414820656</td><td rowspan="1">17267</td></tr><tr><th colspan="4">ValidateHomepage &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Academy.E2EProject.HomePage</td><td><a href="#m2">validateLogin</a></td><td rowspan="1">1598414838345</td><td rowspan="1">4199</td></tr></tbody>
-<tbody id="t3"><tr><th colspan="4">ValidateNav &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Academy.E2EProject.validateNavigationBar</td><td><a href="#m3">validateNavBar</a></td><td rowspan="1">1598414844879</td><td rowspan="1">52</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Validate Title in page &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Academy.E2EProject.validateNavigationBar</td><td><a href="#m0">validateNavBar</a></td><td rowspan="1">1602370742243</td><td rowspan="1">103</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">ValidateTitle &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Academy.E2EProject.validateTitle</td><td><a href="#m1">getTitle</a></td><td rowspan="1">1602370743148</td><td rowspan="1">44</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">Validate User Login &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Academy.E2EProject.HomePage</td><td><a href="#m2">validateLogin</a></td><td rowspan="2">1602370738520</td><td rowspan="2">7572</td></tr><tr class="passedeven"><td><a href="#m3">validateLogin</a></td></tr></tbody>
 </table>
-<h2>AppTesting</h2><h2>ValidateTitle</h2><h3 id="m0">Academy.E2EProject.validateTitle#getTitle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [FEATURED COURrSES] but found [FEATURED COURSES]
-	at Academy.E2EProject.validateTitle.getTitle(validateTitle.java:31)
+<h2>AppTesting</h2><h2>Validate Title in page</h2><h3 id="m0">Academy.E2EProject.validateNavigationBar#validateNavBar</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ValidateTitle</h2><h3 id="m1">Academy.E2EProject.validateTitle#getTitle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [FEATURED COURrSES] but found [FEATURED COURSES]
+	at Academy.E2EProject.validateTitle.getTitle(validateTitle.java:33)
 	at java.util.ArrayList.forEach(Unknown Source)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>ValidateHomepage</h2><h3 id="m1">Academy.E2EProject.HomePage#validateLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>jerryrice@gmail.com</td><td>123456</td><td>Restricted user</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;https://rahulshettyacademy.com/sign_in/&quot;&gt;...&lt;/a&gt; is not clickable at point (758, 16). Other element would receive the click: &lt;div class=&quot;listbuilder-popup-content&quot;&gt;...&lt;/div&gt;
-  (Session info: headless chrome=84.0.4147.135)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LANKE&apos;, ip: &apos;192.168.2.37&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\tshis\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62924}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: eda7a8130794626b37e6c8bb71f0323e
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at pageObjects.LandingPage.getLogin(LandingPage.java:17)
-	at Academy.E2EProject.HomePage.validateLogin(HomePage.java:26)
-	at java.util.ArrayList.forEach(Unknown Source)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Academy.E2EProject.HomePage#validateLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>malcommiddle99@gmail.com</td><td>123456</td><td>Non Restricted user</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>ValidateNav</h2><h3 id="m3">Academy.E2EProject.validateNavigationBar#validateNavBar</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Validate User Login</h2><h3 id="m2">Academy.E2EProject.HomePage#validateLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>jerryrice@gmail.com</td><td>123456</td><td>Restricted user</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Academy.E2EProject.HomePage#validateLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>malcommiddle99@gmail.com</td><td>123456</td><td>Non Restricted user</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

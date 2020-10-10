@@ -8,9 +8,9 @@ import org.openqa.selenium.WebElement;
 public class ForgotPassword {
 	public WebDriver driver;
 	
-	//creates objects using By class and assignes respective html web elements 
-	By login = By.cssSelector("[id='user_email']");
-	By sendInstructions = By.cssSelector("input[type='submit']");
+	//creates objects using By class and assigns respective HTML web elements 
+	private By login = By.cssSelector("[id='user_email']");
+	private By sendInstructions = By.cssSelector("input[type='submit']");
 
 	//returns instance of WebDriver object
 	public ForgotPassword(WebDriver driver) {

@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage {
 	public WebDriver driver;
-	//creates objects using By class and assignes respective html web elements 
-	By login = By.cssSelector("[id='user_email']");
-	By password = By.cssSelector("[type='password']");
-	By submit = By.cssSelector("input[type='submit']");
-	By forgotPass = By.cssSelector("[href*='password/new/']");
+	//creates objects using By class and assigns respective html web elements 
+	private By login = By.cssSelector("[id='user_email']");
+	private By password = By.cssSelector("[type='password']");
+	private By submit = By.cssSelector("input[type='submit']");
+	private By forgotPass = By.cssSelector("[href*='password/new/']");
 
 	//will click on forgot password and calls ForgotPassword class to handle test
 	public ForgotPassword forgotPassword() {

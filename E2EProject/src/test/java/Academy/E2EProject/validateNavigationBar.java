@@ -8,11 +8,11 @@ import pageObjects.LandingPage;
 import pageObjects.LoginPage;
 
 public class validateNavigationBar extends Base{
-	//Test will run first which eill initialize the drive object via method call and then it 
+	//Test will run first which will initialize the drive object via method call and then it 
 	@BeforeTest
 	public void initialize() throws IOException {
 		driver = initializeDriver();
-		//retrieves value of url from propety file and navigates to page
+		//retrieves value of url from property file and navigates to page
 		driver.get(prop.getProperty("url"));
 	}	
 	@Test
